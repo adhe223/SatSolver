@@ -1,16 +1,17 @@
 #ifndef GENETICSOLVER_H
 #define GENETICSOLVER_H
 #include "Population.h"
+#include "Clause.h"
+#include "Solver.h"
 
-class GeneticSolver {
+class GeneticSolver : public  Solver{
 public:
 	GeneticSolver(Population * inPop, std::string inFilename);
 
-	void assignFitness(string filename);
+	void assignFitness();
 
 private:
-	Population * myPop;
-	std::string filename;
+	//Population * myPop;
 };
 
 #endif

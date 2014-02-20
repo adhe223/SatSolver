@@ -35,5 +35,5 @@ Solver::Solver(string inFilename, int popSize) {
 	}
 
 	//Now construct the population with the correct number of variables
-	pop = new Population(numVars, popSize);
+	myPop = new Population(numVars, popSize);
 }

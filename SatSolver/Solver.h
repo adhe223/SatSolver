@@ -9,7 +9,7 @@ public:
 	Solver(std::string filename, int popSize);
 
 private:
-	Population * pop;
+	Population * myPop;
 };
 
 #endif
