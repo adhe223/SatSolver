@@ -7,6 +7,8 @@
 using namespace std;
 
 Solver::Solver(string inFilename, int popSize) {
+	
+	/*	Rolled into GeneticSolver
 	//initialize the parameters we will use to create our population
 	int numVars = -1;
 
@@ -35,5 +37,6 @@ Solver::Solver(string inFilename, int popSize) {
 	}
 
 	//Now construct the population with the correct number of variables
-	myPop = new Population(numVars, popSize);
+	myPop = new Population(inFilename, popSize);
+	*/
 }

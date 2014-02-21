@@ -5,7 +5,7 @@
 
 class Clause {
 public:
-	Clause(vector<int> inConstraints);
+	Clause(std::vector<int> inConstraints);
 
 	bool satisfy(Solution * toCheck);
 private:

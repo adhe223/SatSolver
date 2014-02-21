@@ -7,10 +7,10 @@
 
 class Population {
 public:
-	Population(int numVars, int popSize);
+	Population(std::string inFilename, int popSize);
 	Population(const Population & inPop);
 
-	void assignGeneticFitness(vector<Clause*> inClause);	//Takes in the cosntraints to judge against
+	void assignGeneticFitness(std::vector<Clause*> & inClause);	//Takes in the cosntraints to judge against
 
 private:
 	std::vector<Solution*> solutions;

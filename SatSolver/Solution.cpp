@@ -31,6 +31,6 @@ void Solution::setFitness(int inFit) {
 }
 
 int Solution::getIndex(int index) {
-	return vars[index];
+	return vars[index - 1];
 }
 

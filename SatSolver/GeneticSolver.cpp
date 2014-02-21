@@ -15,7 +15,7 @@ void GeneticSolver::assignFitness() {
 	myPop->assignGeneticFitness(clauses);
 }
 
-void GeneticSolver::readClauses(string filename) {
+void GeneticSolver::readClauses() {
 	ifstream inFile;
 	inFile.open(filename);
 	string line;
@@ -29,14 +29,19 @@ void GeneticSolver::readClauses(string filename) {
 	while (getline(inFile, line)) {
 		vector<int> constraints;
 		stringstream ss(line, ios_base::in);
-		int toAdd;
 
-		while (!ss.eof) {		//Read in values until ss is empty
-		ss >> toAdd;
-		constraints.push_back(toAdd);
+		if (ss.str()[0] != 'c') {	//Make sure it's not a comment
+			int toAdd;
+
+			loop = true;
+			while (loop){		//Read in values until ss is empty
+				ss >> toAdd;
+				if (toAdd == 0) { loop = false; }	//If 0 we have reached the end of the clause
+				else { constraints.push_back(toAdd); }
+			}
+
+			//All the variables have been read into the clause, now push onto the clauses vector
+			clauses.push_back(new Clause(constraints));
 		}
-
-		//All the variables have been read into the clause, now push onto the clauses vector
-		clauses.push_back(new Clause(constraints));
 	}
 }
