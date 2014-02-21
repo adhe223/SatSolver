@@ -34,3 +34,9 @@ int Solution::getIndex(int index) {
 	return vars[index - 1];
 }
 
+/*
+bool Solution::operator() (Solution & sol1, Solution & sol2) {
+	return sol1.getFitness() > sol2.getFitness();
+}
+*/
+

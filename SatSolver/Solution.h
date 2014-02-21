@@ -12,6 +12,9 @@ public:
 	void setFitness(int inFit);
 	int getIndex(int index);
 
+	//Compare function for sort
+	//bool operator() (Solution & sol1, Solution & sol2);
+
 private:
 	std::vector<bool> vars;
 	int fitness;

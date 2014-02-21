@@ -64,19 +64,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Clause.cpp" />
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\GeneticSolver.cpp" />
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\main.cpp" />
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Population.cpp" />
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solution.cpp" />
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solver.cpp" />
+    <ClCompile Include="Clause.cpp" />
+    <ClCompile Include="GeneticSolver.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Population.cpp" />
+    <ClCompile Include="SATSolver.cpp" />
+    <ClCompile Include="Solution.cpp" />
+    <ClCompile Include="Solver.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Clause.h" />
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\GeneticSolver.h" />
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Population.h" />
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solution.h" />
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solver.h" />
+    <ClInclude Include="Clause.h" />
+    <ClInclude Include="GeneticSolver.h" />
+    <ClInclude Include="Population.h" />
+    <ClInclude Include="SATSolver.h" />
+    <ClInclude Include="Solution.h" />
+    <ClInclude Include="Solver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

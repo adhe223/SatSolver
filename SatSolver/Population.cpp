@@ -60,3 +60,16 @@ void Population::assignGeneticFitness(vector<Clause*> & inClauses) {
 		solutions[j]->setFitness(fitCount);
 	}
 }
+
+vector<Solution *> & Population::getSolutions() {
+	return solutions;
+}
+
+//Make sure this does not leak memory
+void Population::resetSolutions(std::vector<Solution *> & inSolutions) {
+	for (int i = 0; i < solutions.size(); i++) {
+		delete solutions[i];
+	}
+
+	solutions = inSolutions;
+}

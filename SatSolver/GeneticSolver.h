@@ -3,6 +3,7 @@
 #include "Population.h"
 #include "Clause.h"
 #include "Solver.h"
+#include "Solution.h"
 #include <string>
 
 class GeneticSolver {
@@ -11,6 +12,8 @@ public:
 
 	void assignFitness();
 	void readClauses();
+	void selection();
+	bool mycompare(Solution * sol1, Solution * sol2);
 
 private:
 	Population * myPop;

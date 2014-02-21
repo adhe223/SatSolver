@@ -11,6 +11,8 @@ public:
 	Population(const Population & inPop);
 
 	void assignGeneticFitness(std::vector<Clause*> & inClause);	//Takes in the cosntraints to judge against
+	std::vector<Solution*> & getSolutions();
+	void resetSolutions(std::vector<Solution *> & inSolutions);
 
 private:
 	std::vector<Solution*> solutions;

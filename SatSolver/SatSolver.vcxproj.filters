@@ -15,39 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solution.cpp">
+    <ClCompile Include="SATSolver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Population.cpp">
+    <ClCompile Include="Solution.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\main.cpp">
+    <ClCompile Include="Solver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solver.cpp">
+    <ClCompile Include="Clause.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\GeneticSolver.cpp">
+    <ClCompile Include="GeneticSolver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Clause.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Population.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solution.h">
+    <ClInclude Include="SATSolver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Population.h">
+    <ClInclude Include="Solution.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Solver.h">
+    <ClInclude Include="Solver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\GeneticSolver.h">
+    <ClInclude Include="Clause.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\Clause.h">
+    <ClInclude Include="GeneticSolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Population.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -11,6 +11,7 @@ int main() {
 	GeneticSolver * gs = new GeneticSolver(pop, "bla.txt");
 	gs->readClauses();
 	gs->assignFitness();
+	gs->selection();
 
 	return 0;
 }
