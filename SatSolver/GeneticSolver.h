@@ -11,14 +11,24 @@ public:
 	GeneticSolver(Population * inPop, std::string inFilename);
 
 	void assignFitness();
-	void readClauses();
 	void selection();
-	bool mycompare(Solution * sol1, Solution * sol2);
+	void mutate();
+	Solution * isSolved();
+
+	//Used strictly for debugging
+	int getTopFitness();
+	
 
 private:
+	Solution * cross(int parentPoolSize);
+	void readClauses();
+
 	Population * myPop;
 	std::vector<Clause*> clauses;
 	std::string filename;
+
+	const double POP_CUTOFF = .3;
+	const double MUTATE_PROB = .1;
 };
 
 #endif

@@ -1,5 +1,6 @@
 #include "Solver.h"
 #include "Population.h"
+#include "GeneticSolver.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -7,36 +8,30 @@
 using namespace std;
 
 Solver::Solver(string inFilename, int popSize) {
-	
-	/*	Rolled into GeneticSolver
-	//initialize the parameters we will use to create our population
-	int numVars = -1;
-
-	//Read in the file and find how many vairiables there are
-	bool loop = true;
-	string line;
-	string filename = inFilename;
-	ifstream inStream(filename);
-
-	//Get to the line starting with p
-	while (loop) {
-		getline(inStream, line);
-		if (line[0] == 'p') {
-			loop = false;
-			stringstream ss(line, ios_base::in);
-
-			//Get the numvar info
-			string temp;
-
-			ss >> temp;
-			ss >> temp;
-
-			//Should be at the numVar data now
-			ss >> numVars;
-		}
-	}
-
-	//Now construct the population with the correct number of variables
+	filename = inFilename;
 	myPop = new Population(inFilename, popSize);
-	*/
+}
+
+Solution * Solver::geneticSolve() {
+	GeneticSolver * gs = new GeneticSolver(myPop, filename);
+	bool solutionFound = false;
+	Solution * solution = NULL;
+	int roundCount = 1;
+
+	while (!solutionFound) {
+		solution = gs->isSolved();			//Check if the problem is solved
+		if (solution != NULL) {
+			//We have solution!
+			return solution;
+		}
+
+		gs->assignFitness();	//judges fitness of population
+
+		cout << "Beginning round " << roundCount << " with a best fitness of " << gs->getTopFitness() << "!" << endl;
+
+		gs->selection();		//Select the best of pop
+		gs->mutate();			//Mutate the pop
+
+		roundCount++;
+	}
 }

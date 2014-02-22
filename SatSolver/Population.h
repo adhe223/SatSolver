@@ -9,6 +9,7 @@ class Population {
 public:
 	Population(std::string inFilename, int popSize);
 	Population(const Population & inPop);
+	~Population();
 
 	void assignGeneticFitness(std::vector<Clause*> & inClause);	//Takes in the cosntraints to judge against
 	std::vector<Solution*> & getSolutions();

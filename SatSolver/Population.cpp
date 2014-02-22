@@ -42,6 +42,12 @@ Population::Population(const Population & inPop) {
 	solutions = inPop.solutions;
 }
 
+Population::~Population() {
+	for (int i = 0; i < solutions.size(); i++) {
+		delete solutions[i];
+	}
+}
+
 void Population::assignGeneticFitness(vector<Clause*> & inClauses) {
 	//Fitness will be +1 for every constraint the variable satisfies
 

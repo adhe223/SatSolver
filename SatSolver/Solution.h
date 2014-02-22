@@ -7,13 +7,15 @@ class Solution {
 public:
 	Solution(int numVars);
 	Solution(const Solution & inSol);
+	Solution(std::vector<bool> inVars);
 
 	int getFitness();
 	void setFitness(int inFit);
-	int getIndex(int index);
+	bool getIndex(int index);
+	std::vector<bool> getVars();
+	void mutateVars(double mutateProb);
 
-	//Compare function for sort
-	//bool operator() (Solution & sol1, Solution & sol2);
+	void printSolution();
 
 private:
 	std::vector<bool> vars;

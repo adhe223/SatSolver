@@ -1,5 +1,7 @@
 #include "Solution.h"
 #include <random>
+#include <iostream>
+#include <ctime>
 using namespace std;
 
 Solution::Solution(int numVarsIn) {
@@ -22,6 +24,11 @@ Solution::Solution(const Solution & inSol) {
 	fitness = inSol.fitness;
 }
 
+Solution::Solution(vector<bool> inVars) {
+	vars = inVars;
+	fitness = -1;
+}
+
 int Solution::getFitness() {
 	return fitness;
 }
@@ -30,13 +37,34 @@ void Solution::setFitness(int inFit) {
 	fitness = inFit;
 }
 
-int Solution::getIndex(int index) {
+bool Solution::getIndex(int index) {
 	return vars[index - 1];
 }
 
-/*
-bool Solution::operator() (Solution & sol1, Solution & sol2) {
-	return sol1.getFitness() > sol2.getFitness();
+vector<bool> Solution::getVars() {
+	return vars;
 }
-*/
+
+//Easier for genetic algorithm to place this here
+void Solution::mutateVars(double mutateProb) {
+	for (int i = 0; i < vars.size(); i++) {
+		int randInt = rand() % 100;
+		if (randInt < mutateProb * 100) {
+			//Flip the var
+			if (vars[i]) { vars[i] = false; }
+			else { vars[i] = true; }
+		}
+	}
+}
+
+void Solution::printSolution() {
+	cout << endl;
+
+	for (int i = 0; i < vars.size(); i++) {
+		if (vars[i]) { cout << i + 1 << "   "; }
+		else { cout << "-" << i + 1 << "   "; }
+	}
+
+	cout << endl;
+}
 
