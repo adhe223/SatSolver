@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
+#include <iostream>
 using namespace std;
 
 GeneticSolver::GeneticSolver(Population * inPop, string inFilename) {
@@ -17,6 +18,7 @@ GeneticSolver::GeneticSolver(Population * inPop, string inFilename) {
 
 	filename = inFilename;
 	readClauses();
+	stuckCount = 0;
 }
 
 void GeneticSolver::assignFitness() {
@@ -85,6 +87,8 @@ void GeneticSolver::selection() {
 		sols.push_back(cross(trimSize));
 	}
 
+	int foo = 5;
+
 	//We now have a new population!
 }
 
@@ -128,23 +132,46 @@ void GeneticSolver::mutate() {
 	}
 }
 
-//							***TO DO!!!!***
-/*At the moment can only handle problems with a solution. Need to add the ability to recognize that it is
-stuck or that there is no solution.*/
-Solution * GeneticSolver::isSolved() {
+bool GeneticSolver::isSolved(int roundCount) {
 	int numClauses = clauses.size();
 
 	//If we have a solution with a fitness == to numClauses then the SAT problem is solved
 	vector<Solution *> & sols = myPop->getSolutions();
 	for (int i = 0; i < sols.size(); i++) {
 		if (sols[i]->getFitness() == numClauses) {
-			return sols[i];
+			cout << "You have solved the SAT problem on round " << (stuckCount * STUCK_THRESHOLD) + roundCount << "!" << endl;
+			sols[i]->printSolution();
+			return true;
 		}
 	}
 
-	return NULL;
+	return false;
 }
 
 int GeneticSolver::getTopFitness() {
 	return myPop->getSolutions()[0]->getFitness();
+}
+
+bool GeneticSolver::isStuck(int currCount) {
+	if (currCount > STUCK_THRESHOLD) {
+		stuckCount++;
+		cout << endl << "Got stuck, resetting the population." << endl;
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+int GeneticSolver::getStuckCount() {
+	return stuckCount;
+}
+
+int GeneticSolver::getStuckLimit() {
+	return STUCK_LIMIT;
+}
+
+void GeneticSolver::genocide(Population * inPop) {
+	//Make a deep copy to work with
+	myPop = new Population(*inPop);
 }

@@ -38,8 +38,11 @@ Population::Population(string inFilename, int popSize) {
 	}
 }
 
+//Deep copy
 Population::Population(const Population & inPop) {
-	solutions = inPop.solutions;
+	for (int i = 0; i < inPop.solutions.size(); i++) {
+		solutions.push_back(new Solution(*inPop.solutions[i]));
+	}
 }
 
 Population::~Population() {

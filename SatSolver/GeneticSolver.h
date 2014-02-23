@@ -13,9 +13,13 @@ public:
 	void assignFitness();
 	void selection();
 	void mutate();
-	Solution * isSolved();
+	bool isSolved(int roundCount);
+	bool isStuck(int currCount);
+	int getStuckCount();
+	int getStuckLimit();
+	void genocide(Population * inPop);	//Reset pop
 
-	//Used strictly for debugging
+	//Used for debugging output
 	int getTopFitness();
 	
 
@@ -27,8 +31,11 @@ private:
 	std::vector<Clause*> clauses;
 	std::string filename;
 
-	const double POP_CUTOFF = .3;
-	const double MUTATE_PROB = .1;
+	int stuckCount;	//Number of times the function has gotten stuck
+	const int STUCK_LIMIT = 15;
+	const int STUCK_THRESHOLD = 200;
+	const double POP_CUTOFF = .15;
+	const double MUTATE_PROB = .05;
 };
 
 #endif

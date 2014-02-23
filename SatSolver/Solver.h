@@ -9,7 +9,7 @@ class Solver {
 public:
 	Solver(std::string filename, int popSize);
 
-	Solution * geneticSolve();
+	void geneticSolve();
 
 private:
 	Population * myPop;
