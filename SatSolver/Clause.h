@@ -8,6 +8,8 @@ public:
 	Clause(std::vector<int> inConstraints);
 
 	bool satisfy(Solution * toCheck);
+	std::vector<int> & getConstraints();
+
 private:
 	std::vector<int> constraints;
 };

@@ -15,8 +15,9 @@ int main() {
 
 	Solution * solution = NULL;
 	
-	Solver * solver = new Solver("10.44.1667358355.cnf", POP_SIZE);
-	solver->geneticSolve();
+	Solver * solver = new Solver("f0040-01-s.cnf");
+	//solver->geneticSolve(POP_SIZE);
+	solver->walkSolve();
 
 	cin.ignore(200, '\n');
 	return 0;

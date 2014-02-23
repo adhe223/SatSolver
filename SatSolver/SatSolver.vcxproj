@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\helper.cpp" />
+    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\WalkSAT.cpp" />
     <ClCompile Include="Clause.cpp" />
     <ClCompile Include="GeneticSolver.cpp" />
     <ClCompile Include="main.cpp" />
@@ -74,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\helper.h" />
+    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\WalkSAT.h" />
     <ClInclude Include="Clause.h" />
     <ClInclude Include="GeneticSolver.h" />
     <ClInclude Include="Population.h" />

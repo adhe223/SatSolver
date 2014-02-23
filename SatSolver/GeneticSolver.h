@@ -8,7 +8,7 @@
 
 class GeneticSolver {
 public:
-	GeneticSolver(Population * inPop, std::string inFilename);
+	GeneticSolver(Population * inPop, std::vector<Clause*> inClauses);
 
 	void assignFitness();
 	void selection();
@@ -25,13 +25,13 @@ public:
 
 private:
 	Solution * cross(int parentPoolSize);
-	void readClauses();
 
 	Population * myPop;
 	std::vector<Clause*> clauses;
-	std::string filename;
 
 	int stuckCount;	//Number of times the function has gotten stuck
+
+	//Tweakers
 	const int STUCK_LIMIT = 15;
 	const int STUCK_THRESHOLD = 200;
 	const double POP_CUTOFF = .15;

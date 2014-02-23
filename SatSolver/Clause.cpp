@@ -20,3 +20,7 @@ bool Clause::satisfy(Solution * toCheck) {
 
 	return satisfy;
 }
+
+vector<int> & Clause::getConstraints() {
+	return constraints;
+}

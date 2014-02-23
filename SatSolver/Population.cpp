@@ -7,13 +7,12 @@ using namespace std;
 
 Population::Population(string inFilename, int popSize) {
 	//initialize the parameters we will use to create our population
-	int numVars = -1;
-
+	
 	//Read in the file and find how many vairiables there are
+	int numVars = -1;
 	bool loop = true;
 	string line;
-	string filename = inFilename;
-	ifstream inStream(filename);
+	ifstream inStream(inFilename);
 
 	//Get to the line starting with p
 	while (loop) {

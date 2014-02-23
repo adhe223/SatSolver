@@ -41,7 +41,7 @@ bool Solution::getIndex(int index) {
 	return vars[index - 1];
 }
 
-vector<bool> Solution::getVars() {
+vector<bool> & Solution::getVars() {
 	return vars;
 }
 

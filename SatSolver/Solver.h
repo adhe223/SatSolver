@@ -7,13 +7,16 @@
 
 class Solver {
 public:
-	Solver(std::string filename, int popSize);
+	Solver(std::string filename);
 
-	void geneticSolve();
+	void readClauses();
+	void geneticSolve(int popSize);
+	void walkSolve();
 
 private:
 	Population * myPop;
 	std::string filename;
+	std::vector<Clause*> clauses;
 };
 
 #endif
