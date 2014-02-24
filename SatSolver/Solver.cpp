@@ -48,7 +48,6 @@ void Solver::geneticSolve(int popSize) {
 	myPop = new Population(filename, popSize);
 	cout << "Working on Genetic Solver..." << endl << endl;
 
-	readClauses();
 	GeneticSolver * gs = new GeneticSolver(myPop, clauses);
 	bool solutionFound = false;
 	int roundCount = 1;
@@ -87,7 +86,6 @@ void Solver::geneticSolve(int popSize) {
 void Solver::walkSolve() {
 	cout << "Working on WalkSAT..." << endl << endl;
 
-	readClauses();
 	WalkSAT * ws = new WalkSAT(clauses, filename);
 	bool solutionFound = false;
 	

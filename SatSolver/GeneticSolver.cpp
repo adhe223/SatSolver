@@ -24,8 +24,6 @@ void GeneticSolver::assignFitness() {
 	myPop->assignGeneticFitness(clauses);
 }
 
-
-
 void GeneticSolver::selection() {
 	//Select the best members of the population and remove the rest
 	vector<Solution *> & sols = myPop->getSolutions();

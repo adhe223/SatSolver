@@ -62,6 +62,11 @@ bool WalkSAT::isSolved(int flipCount) {
 		}
 	}
 
+	if (isSolved) {
+		cout << "WalkSAT has solved the problem in " << flipCount << " flips!" << endl;
+		mySol->printSolution();
+	}
+
 	return isSolved;
 }
 
@@ -80,10 +85,10 @@ void WalkSAT::walk() {
 
 		//Now flip that constraint in our solution
 		if (vars[indexToFlip - 1] == true) {
-			vars[indexToFlip - 1] == false;
+			vars[indexToFlip - 1] = false;
 		}
 		else {
-			vars[indexToFlip] == true;
+			vars[indexToFlip - 1] = true;
 		}
 	}
 	//To DO!!!! : Make sure this does not change the actual solution for each test
@@ -115,10 +120,10 @@ Solution * WalkSAT::getBestSol() {
 		vector<bool> vars = mySol->getVarsCopy();	//We want a copy here! Not a reference!
 		//Flip the var
 		if (vars[i] == true) {
-			vars[i] == false;
+			vars[i] = false;
 		}
 		else {
-			vars[i] == true;
+			vars[i] = true;
 		}
 		Solution * tempSol = new Solution(vars);	//Create a new solution with the modified vars
 		int numSat = numClauseSat(tempSol);	//Compute score

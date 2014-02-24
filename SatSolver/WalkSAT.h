@@ -25,8 +25,8 @@ private:
 	std::vector<Clause*> clauses;
 
 	//Tweakers
-	const double RANDOM_WALK_PROB = .2;
-	const double MAX_FLIPS = 2000;
+	const double RANDOM_WALK_PROB = .5;
+	const double MAX_FLIPS = 10000;
 };
 
 #endif
