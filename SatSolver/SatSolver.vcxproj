@@ -64,23 +64,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\helper.cpp" />
-    <ClCompile Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\WalkSAT.cpp" />
-    <ClCompile Include="Clause.cpp" />
-    <ClCompile Include="GeneticSolver.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Population.cpp" />
-    <ClCompile Include="Solution.cpp" />
-    <ClCompile Include="Solver.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\helper.h" />
-    <ClInclude Include="..\..\..\..\Alex%27s Documents\Github\SatSolver\SatSolver\WalkSAT.h" />
     <ClInclude Include="Clause.h" />
     <ClInclude Include="GeneticSolver.h" />
+    <ClInclude Include="helper.h" />
     <ClInclude Include="Population.h" />
+    <ClInclude Include="SATSolver.h" />
     <ClInclude Include="Solution.h" />
     <ClInclude Include="Solver.h" />
+    <ClInclude Include="WalkSAT.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Clause.cpp" />
+    <ClCompile Include="GeneticSolver.cpp" />
+    <ClCompile Include="helper.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Population.cpp" />
+    <ClCompile Include="SATSolver.cpp" />
+    <ClCompile Include="Solution.cpp" />
+    <ClCompile Include="Solver.cpp" />
+    <ClCompile Include="WalkSAT.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

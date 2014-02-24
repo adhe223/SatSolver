@@ -41,7 +41,11 @@ bool Solution::getIndex(int index) {
 	return vars[index - 1];
 }
 
-vector<bool> & Solution::getVars() {
+vector<bool> & Solution::getVarsRef() {
+	return vars;
+}
+
+vector<bool> Solution::getVarsCopy() {
 	return vars;
 }
 

@@ -76,10 +76,10 @@ Solution * GeneticSolver::cross(int parentPoolSize) {
 
 	//Now look at each constraint and randomly select which parent the child inherits it from
 	vector<bool> buildChild;
-	vector<bool> vars0 = parent0->getVars();
-	vector<bool> vars1 = parent1->getVars();
-	vector<bool> vars2 = parent2->getVars();
-	vector<bool> vars3 = parent3->getVars();
+	vector<bool> vars0 = parent0->getVarsRef();
+	vector<bool> vars1 = parent1->getVarsRef();
+	vector<bool> vars2 = parent2->getVarsRef();
+	vector<bool> vars3 = parent3->getVarsRef();
 
 	for (int i = 0; i < vars0.size(); i++) {
 		int fromParent = rand() % 4;

@@ -53,12 +53,12 @@ int WalkSAT::getMaxFlips() {
 
 bool WalkSAT::isSolved(int flipCount) {
 	bool isSolved = true;
+	unsatClauses.clear();	//Reset unsatClauses
 
 	for (int i = 0; i < clauses.size(); i++) {
 		if (!clauses[i]->satisfy(mySol)) {
 			unsatClauses.push_back(i);	//Maintain this to not waste this computation in randomly selecting later
 			isSolved = false;
-			return isSolved;
 		}
 	}
 
@@ -74,13 +74,13 @@ void WalkSAT::walk() {
 	int choice = rand() % 100;
 	if (choice < RANDOM_WALK_PROB * 100) {
 		//random walk
-		vector<bool> & vars = mySol->getVars();
+		vector<bool> & vars = mySol->getVarsRef();
 		vector<int> & constraints = clause->getConstraints();
 		int indexToFlip = abs(constraints[rand() % constraints.size()]);	//This is the variable to switch
 
 		//Now flip that constraint in our solution
-		if (vars[indexToFlip] == true) {
-			vars[indexToFlip] == false;
+		if (vars[indexToFlip - 1] == true) {
+			vars[indexToFlip - 1] == false;
 		}
 		else {
 			vars[indexToFlip] == true;
@@ -111,8 +111,8 @@ Solution * WalkSAT::getBestSol() {
 	int maxSat = -1;
 
 	//Find out which variable flip results in the best solutions (max # of clauses sat)
-	for (int i = 0; i < mySol->getVars().size(); i++) {
-		vector<bool> vars = mySol->getVars();	//We want a copy here! Not a reference!
+	for (int i = 0; i < mySol->getVarsRef().size(); i++) {
+		vector<bool> vars = mySol->getVarsCopy();	//We want a copy here! Not a reference!
 		//Flip the var
 		if (vars[i] == true) {
 			vars[i] == false;
@@ -122,6 +122,7 @@ Solution * WalkSAT::getBestSol() {
 		}
 		Solution * tempSol = new Solution(vars);	//Create a new solution with the modified vars
 		int numSat = numClauseSat(tempSol);	//Compute score
+		tempSol->setFitness(numSat);
 		if (numSat > maxSat) {
 			maxSat = numSat;
 			if (maxSol != NULL) { delete maxSol; }

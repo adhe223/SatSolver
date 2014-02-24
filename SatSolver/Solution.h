@@ -12,7 +12,8 @@ public:
 	int getFitness();
 	void setFitness(int inFit);
 	bool getIndex(int index);
-	std::vector<bool> & getVars();
+	std::vector<bool> & getVarsRef();
+	std::vector<bool> getVarsCopy();
 	void mutateVars(double mutateProb);
 
 	void printSolution();
