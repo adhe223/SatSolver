@@ -6,6 +6,7 @@
 #include "Clause.h"
 #include <vector>
 
+
 class WalkSAT {
 public:
 	WalkSAT(std::vector<Clause*> inClauses, std::string inFilename);
@@ -15,6 +16,9 @@ public:
 	void walk();
 	int numClauseSat(Solution * sol);
 	Solution * getSol();
+
+	//Data Gathering purposes
+	int maxC;
 
 private:
 	

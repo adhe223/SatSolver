@@ -1,0 +1,240 @@
+
+
+
+File: A3Formulas\A2Formulas\f0020-01-u.cnf
+Genetic: Flips: 2201   Time: 124193   Max C: 83
+WalkSAT: Flips: 10000   Time: 31777   Max C: 83
+Genetic: Flips: 2201   Time: 124536   Max C: 83
+WalkSAT: Flips: 10000   Time: 31746   Max C: 83
+Genetic: Flips: 2201   Time: 123834   Max C: 83
+WalkSAT: Flips: 10000   Time: 32651   Max C: 83
+Genetic: Flips: 2201   Time: 125019   Max C: 83
+WalkSAT: Flips: 10000   Time: 32854   Max C: 83
+Genetic: Flips: 2201   Time: 124192   Max C: 83
+WalkSAT: Flips: 10000   Time: 33135   Max C: 83
+Genetic: Flips: 2201   Time: 124348   Max C: 83
+WalkSAT: Flips: 10000   Time: 32121   Max C: 83
+Genetic: Flips: 2201   Time: 125253   Max C: 83
+WalkSAT: Flips: 10000   Time: 33774   Max C: 83
+Genetic: Flips: 2201   Time: 124910   Max C: 83
+WalkSAT: Flips: 10000   Time: 32932   Max C: 83
+Genetic: Flips: 2201   Time: 125003   Max C: 83
+WalkSAT: Flips: 10000   Time: 32761   Max C: 83
+Genetic: Flips: 2201   Time: 125268   Max C: 83
+WalkSAT: Flips: 10000   Time: 32761   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0020-02-u.cnf
+Genetic: Flips: 2201   Time: 123443   Max C: 83
+WalkSAT: Flips: 10000   Time: 32605   Max C: 83
+Genetic: Flips: 2201   Time: 123786   Max C: 83
+WalkSAT: Flips: 10000   Time: 32308   Max C: 83
+Genetic: Flips: 2201   Time: 123568   Max C: 83
+WalkSAT: Flips: 10000   Time: 31747   Max C: 83
+Genetic: Flips: 2201   Time: 123693   Max C: 83
+WalkSAT: Flips: 10000   Time: 32261   Max C: 83
+Genetic: Flips: 2201   Time: 124052   Max C: 83
+WalkSAT: Flips: 10000   Time: 32417   Max C: 83
+Genetic: Flips: 2201   Time: 124005   Max C: 83
+WalkSAT: Flips: 10000   Time: 32776   Max C: 83
+Genetic: Flips: 2201   Time: 124582   Max C: 83
+WalkSAT: Flips: 10000   Time: 32761   Max C: 83
+Genetic: Flips: 2201   Time: 124660   Max C: 83
+WalkSAT: Flips: 10000   Time: 32916   Max C: 83
+Genetic: Flips: 2201   Time: 124973   Max C: 83
+WalkSAT: Flips: 10000   Time: 32557   Max C: 83
+Genetic: Flips: 2201   Time: 125191   Max C: 83
+WalkSAT: Flips: 10000   Time: 32994   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0020-03-u.cnf
+Genetic: Flips: 2201   Time: 124473   Max C: 83
+WalkSAT: Flips: 10000   Time: 32105   Max C: 83
+Genetic: Flips: 2201   Time: 124240   Max C: 83
+WalkSAT: Flips: 10000   Time: 32588   Max C: 83
+Genetic: Flips: 2201   Time: 123912   Max C: 83
+WalkSAT: Flips: 10000   Time: 32354   Max C: 83
+Genetic: Flips: 2201   Time: 124318   Max C: 83
+WalkSAT: Flips: 10000   Time: 32448   Max C: 83
+Genetic: Flips: 2201   Time: 124223   Max C: 83
+WalkSAT: Flips: 10000   Time: 32355   Max C: 83
+Genetic: Flips: 2201   Time: 124458   Max C: 83
+WalkSAT: Flips: 10000   Time: 33290   Max C: 83
+Genetic: Flips: 2201   Time: 124879   Max C: 83
+WalkSAT: Flips: 10000   Time: 32979   Max C: 83
+Genetic: Flips: 2201   Time: 125222   Max C: 83
+WalkSAT: Flips: 10000   Time: 32276   Max C: 83
+Genetic: Flips: 2201   Time: 125784   Max C: 83
+WalkSAT: Flips: 10000   Time: 32604   Max C: 83
+Genetic: Flips: 2201   Time: 125597   Max C: 83
+WalkSAT: Flips: 10000   Time: 32573   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0020-04-u.cnf
+Genetic: Flips: 2201   Time: 123568   Max C: 83
+WalkSAT: Flips: 10000   Time: 32292   Max C: 83
+Genetic: Flips: 2201   Time: 123647   Max C: 83
+WalkSAT: Flips: 10000   Time: 32183   Max C: 83
+Genetic: Flips: 2201   Time: 123568   Max C: 83
+WalkSAT: Flips: 10000   Time: 32355   Max C: 83
+Genetic: Flips: 2201   Time: 124317   Max C: 83
+WalkSAT: Flips: 10000   Time: 32355   Max C: 83
+Genetic: Flips: 2201   Time: 124379   Max C: 83
+WalkSAT: Flips: 10000   Time: 32043   Max C: 83
+Genetic: Flips: 2201   Time: 124473   Max C: 83
+WalkSAT: Flips: 10000   Time: 33010   Max C: 83
+Genetic: Flips: 2201   Time: 124769   Max C: 83
+WalkSAT: Flips: 10000   Time: 32277   Max C: 83
+Genetic: Flips: 2201   Time: 125113   Max C: 83
+WalkSAT: Flips: 10000   Time: 32839   Max C: 83
+Genetic: Flips: 2201   Time: 125175   Max C: 83
+WalkSAT: Flips: 10000   Time: 31980   Max C: 83
+Genetic: Flips: 2201   Time: 125082   Max C: 83
+WalkSAT: Flips: 10000   Time: 32557   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0020-05-u.cnf
+Genetic: Flips: 2201   Time: 123740   Max C: 83
+WalkSAT: Flips: 10000   Time: 31809   Max C: 83
+Genetic: Flips: 2201   Time: 123662   Max C: 83
+WalkSAT: Flips: 10000   Time: 32152   Max C: 83
+Genetic: Flips: 2201   Time: 123646   Max C: 83
+WalkSAT: Flips: 10000   Time: 32308   Max C: 83
+Genetic: Flips: 2201   Time: 123802   Max C: 83
+WalkSAT: Flips: 10000   Time: 32168   Max C: 83
+Genetic: Flips: 2201   Time: 124332   Max C: 83
+WalkSAT: Flips: 10000   Time: 32371   Max C: 83
+Genetic: Flips: 2201   Time: 124332   Max C: 83
+WalkSAT: Flips: 10000   Time: 32651   Max C: 83
+Genetic: Flips: 2201   Time: 124645   Max C: 83
+WalkSAT: Flips: 10000   Time: 32682   Max C: 83
+Genetic: Flips: 2201   Time: 124895   Max C: 83
+WalkSAT: Flips: 10000   Time: 32557   Max C: 83
+Genetic: Flips: 2201   Time: 124863   Max C: 83
+WalkSAT: Flips: 10000   Time: 33166   Max C: 83
+Genetic: Flips: 2201   Time: 125144   Max C: 83
+WalkSAT: Flips: 10000   Time: 32979   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0020-06-u.cnf
+Genetic: Flips: 2201   Time: 123334   Max C: 83
+WalkSAT: Flips: 10000   Time: 31996   Max C: 83
+Genetic: Flips: 2201   Time: 123350   Max C: 83
+WalkSAT: Flips: 10000   Time: 32230   Max C: 83
+Genetic: Flips: 2201   Time: 123771   Max C: 83
+WalkSAT: Flips: 10000   Time: 31590   Max C: 83
+Genetic: Flips: 2201   Time: 125878   Max C: 83
+WalkSAT: Flips: 10000   Time: 33852   Max C: 83
+Genetic: Flips: 2201   Time: 128405   Max C: 83
+WalkSAT: Flips: 10000   Time: 33306   Max C: 83
+Genetic: Flips: 2201   Time: 127765   Max C: 83
+WalkSAT: Flips: 10000   Time: 33025   Max C: 83
+Genetic: Flips: 2201   Time: 128561   Max C: 83
+WalkSAT: Flips: 10000   Time: 33696   Max C: 83
+Genetic: Flips: 2201   Time: 128139   Max C: 83
+WalkSAT: Flips: 10000   Time: 32932   Max C: 83
+Genetic: Flips: 2201   Time: 128966   Max C: 83
+WalkSAT: Flips: 10000   Time: 33244   Max C: 83
+Genetic: Flips: 2201   Time: 128701   Max C: 83
+WalkSAT: Flips: 10000   Time: 33930   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0020-07-u.cnf
+Genetic: Flips: 2201   Time: 126423   Max C: 83
+WalkSAT: Flips: 10000   Time: 33556   Max C: 83
+Genetic: Flips: 2201   Time: 127328   Max C: 83
+WalkSAT: Flips: 10000   Time: 33306   Max C: 83
+Genetic: Flips: 2201   Time: 130635   Max C: 83
+WalkSAT: Flips: 10000   Time: 32620   Max C: 83
+Genetic: Flips: 2201   Time: 125799   Max C: 83
+WalkSAT: Flips: 10000   Time: 32371   Max C: 83
+Genetic: Flips: 2201   Time: 125752   Max C: 83
+WalkSAT: Flips: 10000   Time: 33306   Max C: 83
+Genetic: Flips: 2201   Time: 128966   Max C: 83
+WalkSAT: Flips: 10000   Time: 33852   Max C: 83
+Genetic: Flips: 2201   Time: 133163   Max C: 83
+WalkSAT: Flips: 10000   Time: 35053   Max C: 83
+Genetic: Flips: 2201   Time: 132383   Max C: 83
+WalkSAT: Flips: 10000   Time: 34304   Max C: 83
+Genetic: Flips: 2201   Time: 131026   Max C: 83
+WalkSAT: Flips: 10000   Time: 34164   Max C: 83
+Genetic: Flips: 2201   Time: 130089   Max C: 83
+WalkSAT: Flips: 10000   Time: 34960   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0020-08-u.cnf
+Genetic: Flips: 2201   Time: 127094   Max C: 83
+WalkSAT: Flips: 10000   Time: 34336   Max C: 83
+Genetic: Flips: 2201   Time: 129060   Max C: 83
+WalkSAT: Flips: 10000   Time: 32666   Max C: 83
+Genetic: Flips: 2201   Time: 128030   Max C: 83
+WalkSAT: Flips: 10000   Time: 33806   Max C: 83
+Genetic: Flips: 2201   Time: 128217   Max C: 83
+WalkSAT: Flips: 10000   Time: 33852   Max C: 83
+Genetic: Flips: 2201   Time: 129840   Max C: 83
+WalkSAT: Flips: 10000   Time: 34086   Max C: 83
+Genetic: Flips: 2201   Time: 125846   Max C: 83
+WalkSAT: Flips: 10000   Time: 32885   Max C: 83
+Genetic: Flips: 2201   Time: 125550   Max C: 83
+WalkSAT: Flips: 10000   Time: 32885   Max C: 83
+Genetic: Flips: 2201   Time: 126095   Max C: 83
+WalkSAT: Flips: 10000   Time: 33197   Max C: 83
+Genetic: Flips: 2201   Time: 125597   Max C: 83
+WalkSAT: Flips: 10000   Time: 32978   Max C: 83
+Genetic: Flips: 2201   Time: 125644   Max C: 83
+WalkSAT: Flips: 10000   Time: 32931   Max C: 83
+
+
+
+File: A3Formulas\A2Formulas\f0040-01-u.cnf
+Genetic: Flips: 2201   Time: 245108   Max C: 167
+WalkSAT: Flips: 10000   Time: 114209   Max C: 167
+Genetic: Flips: 2201   Time: 243346   Max C: 167
+WalkSAT: Flips: 10000   Time: 113756   Max C: 167
+Genetic: Flips: 2201   Time: 243268   Max C: 167
+WalkSAT: Flips: 10000   Time: 116532   Max C: 167
+Genetic: Flips: 2201   Time: 243331   Max C: 167
+WalkSAT: Flips: 10000   Time: 114816   Max C: 167
+Genetic: Flips: 2201   Time: 245328   Max C: 167
+WalkSAT: Flips: 10000   Time: 115955   Max C: 167
+Genetic: Flips: 2201   Time: 243798   Max C: 167
+WalkSAT: Flips: 10000   Time: 113101   Max C: 167
+Genetic: Flips: 2201   Time: 243471   Max C: 167
+WalkSAT: Flips: 10000   Time: 117999   Max C: 167
+Genetic: Flips: 2201   Time: 245234   Max C: 167
+WalkSAT: Flips: 10000   Time: 117593   Max C: 167
+Genetic: Flips: 2201   Time: 246279   Max C: 167
+WalkSAT: Flips: 10000   Time: 115675   Max C: 167
+Genetic: Flips: 2201   Time: 245967   Max C: 167
+WalkSAT: Flips: 10000   Time: 117156   Max C: 167
+
+
+
+File: A3Formulas\A2Formulas\f0040-02-u.cnf
+Genetic: Flips: 2201   Time: 245483   Max C: 167
+WalkSAT: Flips: 10000   Time: 114786   Max C: 167
+Genetic: Flips: 2201   Time: 243065   Max C: 167
+WalkSAT: Flips: 10000   Time: 115082   Max C: 167
+Genetic: Flips: 2201   Time: 242972   Max C: 167
+WalkSAT: Flips: 10000   Time: 114192   Max C: 167
+Genetic: Flips: 2201   Time: 242348   Max C: 167
+WalkSAT: Flips: 10000   Time: 114598   Max C: 167
+Genetic: Flips: 2201   Time: 242285   Max C: 167
+WalkSAT: Flips: 10000   Time: 117079   Max C: 167
+Genetic: Flips: 2201   Time: 243455   Max C: 167
+WalkSAT: Flips: 10000   Time: 115425   Max C: 167
+Genetic: Flips: 2201   Time: 243112   Max C: 167
+WalkSAT: Flips: 10000   Time: 116065   Max C: 167
+Genetic: Flips: 2201   Time: 243440   Max C: 167
+WalkSAT: Flips: 10000   Time: 114863   Max C: 167
+Genetic: Flips: 2201   Time: 243331   Max C: 167
+WalkSAT: Flips: 10000   Time: 115924   Max C: 167
+Genetic: Flips: 2201   Time: 243954   Max C: 167
+WalkSAT: Flips: 10000   Time: 116705   Max C: 167

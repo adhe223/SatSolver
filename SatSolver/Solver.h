@@ -4,6 +4,7 @@
 #include "Population.h"
 #include "Solution.h"
 #include <string>
+#include <Windows.h>
 
 class Solver {
 public:
@@ -13,10 +14,15 @@ public:
 	void geneticSolve(int popSize);
 	void walkSolve();
 
+	//For data gathering purposes
+	DWORD begin;
+	DWORD end;
 private:
 	Population * myPop;
 	std::string filename;
 	std::vector<Clause*> clauses;
+
+
 };
 
 #endif

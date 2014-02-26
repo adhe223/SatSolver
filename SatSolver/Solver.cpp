@@ -45,6 +45,8 @@ void Solver::readClauses() {
 }
 
 void Solver::geneticSolve(int popSize) {
+	begin = GetTickCount();
+
 	myPop = new Population(filename, popSize);
 	cout << "Working on Genetic Solver..." << endl << endl;
 
@@ -68,13 +70,21 @@ void Solver::geneticSolve(int popSize) {
 			else {
 				//else quit
 				cout << "The problem is either unsatisfiable (most likely) or too difficult to solve without more time!" << endl;
+
+				//For data gathering
+				end = GetTickCount();
+				ofstream output;
+				output.open("results.txt", ios_base::app);
+				output << "Genetic: Flips: " << (gs->getStuckCount() * gs->getStuckThreshold()) + roundCount << "   Time: " << double(end - begin) << "   Max C: " << gs->maxC << endl;
+				output.close();
+
 				return;
 			}
 		}
 		gs->assignFitness();	//judges fitness of population
 
 		//Debug print statement
-		cout << "Beginning round " << roundCount << " with a best fitness of " << gs->getTopFitness() << "!" << endl;
+		//cout << "Beginning round " << roundCount << " with a best fitness of " << gs->getTopFitness() << "!" << endl;
 
 		gs->selection();		//Select the best of pop
 		gs->mutate();			//Mutate the pop
@@ -84,13 +94,18 @@ void Solver::geneticSolve(int popSize) {
 }
 
 void Solver::walkSolve() {
+	begin = GetTickCount();
+
 	cout << "Working on WalkSAT..." << endl << endl;
 
 	WalkSAT * ws = new WalkSAT(clauses, filename);
 	bool solutionFound = false;
 	
 	for (int i = 0; i < ws->getMaxFlips(); i++) {
-		cout << "Beginning WalkSAT round " << i << " with a score of " << ws->numClauseSat(ws->getSol()) << endl;
+		int satClauses = ws->numClauseSat(ws->getSol());
+		//cout << "Beginning WalkSAT round " << i << " with a score of " << satClauses << endl;
+		if (satClauses > ws->maxC) { ws->maxC = satClauses; }
+
 		if (ws->isSolved(i)) {
 			return;
 		}
@@ -99,4 +114,11 @@ void Solver::walkSolve() {
 	}
 
 	cout << "Was not able to solve the SAT problem with WalkSAT!" << endl;
+
+	//For data gathering
+	end = GetTickCount();
+	ofstream output;
+	output.open("results.txt", ios_base::app);
+	output << "WalkSAT: Flips: " << ws->getMaxFlips() << "   Time: " << double(end - begin) << "   Max C: " << ws->maxC << endl;
+	output.close();
 }

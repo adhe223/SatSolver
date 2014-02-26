@@ -39,9 +39,9 @@ void GeneticSolver::selection() {
 	int toErase = sols.size() - 1;
 	while (sols.size() > trimSize) {
 		if (rand() % 101 > (POP_CUTOFF / 5) * 100) {
-			//Solution * pToErase = sols[toErase];	//Memory Leak!!!! Why is this breaking?
+			Solution * pToErase = sols[toErase];	//Memory Leak!!!! Why is this breaking?
 			sols.erase(sols.begin() + toErase);
-			//delete pToErase;	
+			//delete pToErase;
 		}
 
 		toErase--;
@@ -106,9 +106,12 @@ bool GeneticSolver::isSolved(int roundCount) {
 	//If we have a solution with a fitness == to numClauses then the SAT problem is solved
 	vector<Solution *> & sols = myPop->getSolutions();
 	for (int i = 0; i < sols.size(); i++) {
+		if (sols[i]->getFitness() > maxC) { maxC = sols[i]->getFitness(); }
+
 		if (sols[i]->getFitness() == numClauses) {
 			cout << "You have solved the SAT problem on round " << (stuckCount * STUCK_THRESHOLD) + roundCount << "!" << endl;
 			sols[i]->printSolution();
+
 			return true;
 		}
 	}
@@ -142,4 +145,8 @@ int GeneticSolver::getStuckLimit() {
 void GeneticSolver::genocide(Population * inPop) {
 	//Make a deep copy to work with
 	myPop = new Population(*inPop);
+}
+
+int GeneticSolver::getStuckThreshold() {
+	return STUCK_THRESHOLD;
 }

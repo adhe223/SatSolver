@@ -17,10 +17,14 @@ public:
 	bool isStuck(int currCount);
 	int getStuckCount();
 	int getStuckLimit();
+	int getStuckThreshold();
 	void genocide(Population * inPop);	//Reset pop
 
 	//Used for debugging output
 	int getTopFitness();
+
+	//Data Gathering purposes
+	int maxC;
 	
 
 private:
@@ -32,10 +36,11 @@ private:
 	int stuckCount;	//Number of times the function has gotten stuck
 
 	//Tweakers
-	const int STUCK_LIMIT = 15;
+	const int STUCK_LIMIT = 10;
 	const int STUCK_THRESHOLD = 200;
 	const double POP_CUTOFF = .15;
 	const double MUTATE_PROB = .05;
+	
 };
 
 #endif

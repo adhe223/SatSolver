@@ -64,6 +64,7 @@ bool WalkSAT::isSolved(int flipCount) {
 
 	if (isSolved) {
 		cout << "WalkSAT has solved the problem in " << flipCount << " flips!" << endl;
+
 		mySol->printSolution();
 	}
 

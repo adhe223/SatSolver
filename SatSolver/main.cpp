@@ -4,6 +4,8 @@
 #include <random>
 #include <ctime>
 #include <iostream>
+#include <fstream>
+#include <Windows.h>
 using namespace std;
 
 //Size of population
@@ -14,12 +16,30 @@ int main() {
 	srand(time(NULL));
 
 	Solution * solution = NULL;
-	
-	Solver * solver = new Solver("f0040-08-s.cnf");
-	solver->readClauses();
-	//solver->geneticSolve(POP_SIZE);
-	solver->walkSolve();
 
-	cin.ignore(200, '\n');
+	//Test harness
+	ifstream infile;
+	infile.open("files.txt");
+	string filename;
+	while (getline(infile, filename)) {
+
+		Solver * solver = new Solver(filename);
+
+		//Data Gathering purposes
+		ofstream output;
+		output.open("results.txt", ios_base::app);
+		output << endl << endl << endl << "File: " << filename << endl;
+		output.close();
+
+		solver->readClauses();
+
+		for (int i = 0; i < 10; i++) {
+			solver->geneticSolve(POP_SIZE);
+			solver->walkSolve();
+		}
+
+		delete solver;
+	}
+
 	return 0;
 }
