@@ -18,6 +18,11 @@ GeneticSolver::GeneticSolver(Population * inPop, vector<Clause*> inClauses) {
 
 	clauses = inClauses;
 	stuckCount = 0;
+	maxC = -1;
+}
+
+GeneticSolver::~GeneticSolver() {
+	delete myPop;
 }
 
 void GeneticSolver::assignFitness() {
@@ -37,11 +42,11 @@ void GeneticSolver::selection() {
 
 	//Delete the remaining, but have a probability of POP_CUTOFF/5 of keeping a worse solution for diversity
 	int toErase = sols.size() - 1;
-	while (sols.size() > trimSize) {
-		if (rand() % 101 > (POP_CUTOFF / 5) * 100) {
-			Solution * pToErase = sols[toErase];	//Memory Leak!!!! Why is this breaking?
+	while (sols.size() > trimSize || toErase < 0) {
+		if (rand() % 101 >(POP_CUTOFF / 5) * 100) {
+			//Solution * pToErase = sols[toErase];	
 			sols.erase(sols.begin() + toErase);
-			//delete pToErase;
+			//delete pToErase				//Memory Leak!!!! Why does this cause an error?
 		}
 
 		toErase--;
@@ -54,8 +59,6 @@ void GeneticSolver::selection() {
 		be children randomly bred from the parent pool.*/
 		sols.push_back(cross(trimSize));
 	}
-
-	int foo = 5;
 
 	//We now have a new population!
 }
@@ -74,10 +77,10 @@ Solution * GeneticSolver::cross(int parentPoolSize) {
 
 	//Now look at each constraint and randomly select which parent the child inherits it from
 	vector<bool> buildChild;
-	vector<bool> vars0 = parent0->getVarsRef();
-	vector<bool> vars1 = parent1->getVarsRef();
-	vector<bool> vars2 = parent2->getVarsRef();
-	vector<bool> vars3 = parent3->getVarsRef();
+	vector<bool> vars0 = parent0->getVarsCopy();
+	vector<bool> vars1 = parent1->getVarsCopy();
+	vector<bool> vars2 = parent2->getVarsCopy();
+	vector<bool> vars3 = parent3->getVarsCopy();
 
 	for (int i = 0; i < vars0.size(); i++) {
 		int fromParent = rand() % 4;
@@ -109,8 +112,14 @@ bool GeneticSolver::isSolved(int roundCount) {
 		if (sols[i]->getFitness() > maxC) { maxC = sols[i]->getFitness(); }
 
 		if (sols[i]->getFitness() == numClauses) {
-			cout << "You have solved the SAT problem on round " << (stuckCount * STUCK_THRESHOLD) + roundCount << "!" << endl;
-			sols[i]->printSolution();
+			cout << "You have solved the SAT problem with Genetic Algorithm on round " << (stuckCount * STUCK_THRESHOLD) + roundCount << "!" << endl;
+
+
+			ofstream output;
+			output.open("results.txt", ios_base::app);	//Outputs to this file
+			output << endl << "Solved with genetic algorithm!" << endl;
+			sols[i]->printSolution(output);
+			output.close();
 
 			return true;
 		}

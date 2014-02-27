@@ -45,6 +45,11 @@ WalkSAT::WalkSAT(std::vector<Clause*> inClauses, string inFilename) {
 	}
 
 	mySol = new Solution(vars);
+	maxC = -1;
+}
+
+WalkSAT::~WalkSAT() {
+	delete mySol;
 }
 
 int WalkSAT::getMaxFlips() {
@@ -65,7 +70,11 @@ bool WalkSAT::isSolved(int flipCount) {
 	if (isSolved) {
 		cout << "WalkSAT has solved the problem in " << flipCount << " flips!" << endl;
 
-		mySol->printSolution();
+		ofstream output;
+		output.open("results.txt", ios_base::app);
+		output << endl << "Solved with WalkSAT!" << endl;
+		mySol->printSolution(output);
+		output.close();
 	}
 
 	return isSolved;

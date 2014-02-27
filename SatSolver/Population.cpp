@@ -46,7 +46,10 @@ Population::Population(const Population & inPop) {
 
 Population::~Population() {
 	for (int i = 0; i < solutions.size(); i++) {
-		delete solutions[i];
+		if (solutions[i]->getFitness() >= -1) {
+			delete solutions[i];
+			solutions[i] = NULL;
+		}
 	}
 }
 

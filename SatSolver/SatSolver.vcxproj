@@ -68,7 +68,6 @@
     <ClInclude Include="GeneticSolver.h" />
     <ClInclude Include="helper.h" />
     <ClInclude Include="Population.h" />
-    <ClInclude Include="SATSolver.h" />
     <ClInclude Include="Solution.h" />
     <ClInclude Include="Solver.h" />
     <ClInclude Include="WalkSAT.h" />
@@ -79,7 +78,6 @@
     <ClCompile Include="helper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Population.cpp" />
-    <ClCompile Include="SATSolver.cpp" />
     <ClCompile Include="Solution.cpp" />
     <ClCompile Include="Solver.cpp" />
     <ClCompile Include="WalkSAT.cpp" />

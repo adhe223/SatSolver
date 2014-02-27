@@ -61,14 +61,14 @@ void Solution::mutateVars(double mutateProb) {
 	}
 }
 
-void Solution::printSolution() {
-	cout << endl;
+void Solution::printSolution(ostream& out) {
+	out << endl;
 
 	for (int i = 0; i < vars.size(); i++) {
-		if (vars[i]) { cout << i + 1 << "   "; }
-		else { cout << "-" << i + 1 << "   "; }
+		if (vars[i]) { out << i + 1 << "   "; }
+		else { out << "-" << i + 1 << "   "; }
 	}
 
-	cout << endl;
+	out << endl;
 }
 

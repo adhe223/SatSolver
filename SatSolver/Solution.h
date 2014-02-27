@@ -2,6 +2,7 @@
 #define SOLUTION_H
 
 #include <vector>
+#include <fstream>
 
 class Solution {
 public:
@@ -16,7 +17,7 @@ public:
 	std::vector<bool> getVarsCopy();
 	void mutateVars(double mutateProb);
 
-	void printSolution();
+	void printSolution(std::ostream & out);
 
 private:
 	std::vector<bool> vars;

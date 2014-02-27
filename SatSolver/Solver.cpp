@@ -58,6 +58,15 @@ void Solver::geneticSolve(int popSize) {
 		//Check if the problem is solved
 		if (gs->isSolved(roundCount)) {
 			//We have solution!
+
+			//Data Gathering purposes
+			end = GetTickCount();
+			ofstream output;
+			output.open("results.txt", ios_base::app);	//Outputs to this file
+			output << "Genetic: Rounds: " << (gs->getStuckCount() * gs->getStuckThreshold()) + roundCount << "   Time: " << double(end - begin) << "   Max C: " << gs->maxC << endl;
+			output.close();
+
+			delete gs;
 			return;
 		}
 
@@ -75,9 +84,10 @@ void Solver::geneticSolve(int popSize) {
 				end = GetTickCount();
 				ofstream output;
 				output.open("results.txt", ios_base::app);
-				output << "Genetic: Flips: " << (gs->getStuckCount() * gs->getStuckThreshold()) + roundCount << "   Time: " << double(end - begin) << "   Max C: " << gs->maxC << endl;
+				output << "Genetic: Rounds: " << (gs->getStuckCount() * gs->getStuckThreshold()) + roundCount << "   Time: " << double(end - begin) << "   Max C: " << gs->maxC << "    Could not solve with gen alg" << endl;
 				output.close();
 
+				delete gs;
 				return;
 			}
 		}
@@ -107,6 +117,14 @@ void Solver::walkSolve() {
 		if (satClauses > ws->maxC) { ws->maxC = satClauses; }
 
 		if (ws->isSolved(i)) {
+			//Data Gathering
+			end = GetTickCount();
+			ofstream output;
+			output.open("results.txt", ios_base::app);
+			output << "WalkSAT: Flips: " << ws->getMaxFlips() << "   Time: " << double(end - begin) << "   Max C: " << ws->maxC << endl;
+			output.close();
+
+			delete ws;
 			return;
 		}
 
@@ -119,6 +137,7 @@ void Solver::walkSolve() {
 	end = GetTickCount();
 	ofstream output;
 	output.open("results.txt", ios_base::app);
-	output << "WalkSAT: Flips: " << ws->getMaxFlips() << "   Time: " << double(end - begin) << "   Max C: " << ws->maxC << endl;
+	output << "WalkSAT: Flips: " << ws->getMaxFlips() << "   Time: " << double(end - begin) << "   Max C: " << ws->maxC << "   Was not able to solve with WalkSAT" << endl;
 	output.close();
+	delete ws;
 }

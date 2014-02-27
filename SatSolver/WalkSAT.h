@@ -10,6 +10,7 @@
 class WalkSAT {
 public:
 	WalkSAT(std::vector<Clause*> inClauses, std::string inFilename);
+	~WalkSAT();
 
 	int getMaxFlips();
 	bool isSolved(int flipCount);
@@ -21,7 +22,6 @@ public:
 	int maxC;
 
 private:
-	
 	Solution * getBestSol();
 
 	Solution * mySol;

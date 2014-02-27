@@ -17,12 +17,11 @@ public:
 	//For data gathering purposes
 	DWORD begin;
 	DWORD end;
+
 private:
 	Population * myPop;
 	std::string filename;
 	std::vector<Clause*> clauses;
-
-
 };
 
 #endif

@@ -1,1 +1,1 @@
-A3Formulas\A2Formulas\f0040-02-u.cnf
+A3Formulas\A2Formulas\f0020-01-s.cnf

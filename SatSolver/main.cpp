@@ -10,6 +10,7 @@ using namespace std;
 
 //Size of population
 const int POP_SIZE = 100;
+const int NUM_TESTS = 10;
 
 //Genetic Algorithm tweaks are found in its h file private members
 int main() {
@@ -19,7 +20,9 @@ int main() {
 
 	//Test harness
 	ifstream infile;
-	infile.open("files.txt");
+
+	//If non existant file or points to wrong folder nothing will happen
+	infile.open("files.txt");	//Place the files to read here. Will read to end of file
 	string filename;
 	while (getline(infile, filename)) {
 
@@ -27,13 +30,13 @@ int main() {
 
 		//Data Gathering purposes
 		ofstream output;
-		output.open("results.txt", ios_base::app);
+		output.open("results.txt", ios_base::app);	//Outputs to this file
 		output << endl << endl << endl << "File: " << filename << endl;
 		output.close();
 
 		solver->readClauses();
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < NUM_TESTS; i++) {
 			solver->geneticSolve(POP_SIZE);
 			solver->walkSolve();
 		}
@@ -41,5 +44,6 @@ int main() {
 		delete solver;
 	}
 
+	cin.ignore(200, '\n');
 	return 0;
 }
